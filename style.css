@@ -1,0 +1,144 @@
+/* Importa a fonte do Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Define a cor primária (do seu CSS original) */
+:root {
+    --bs-primary: #3f51b5;
+    --bs-primary-rgb: 63, 81, 181;
+
+    /* Sobrescreve a cor primária do Bootstrap para usar a sua */
+    --bs-link-color-rgb: var(--bs-primary-rgb);
+    --bs-border-color: #e0e0e0;
+}
+
+/* 1. Estilos Globais */
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Seu pedido: fundo cinza claro para profissionalismo */
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 2. O Card Principal (Wrapper) */
+.resume-wrapper {
+    border: none;
+    /* Sombra mais suave e moderna */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* 3. Cabeçalho (Nome e Título) */
+header h1 {
+    color: var(--bs-primary);
+    font-weight: 700;
+}
+
+header .lead {
+    font-size: 1.15rem;
+    color: #555;
+}
+
+/* 4. Títulos das Seções (com ícones) */
+.section-title {
+    color: var(--bs-primary);
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--bs-border-color);
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.section-title i {
+    font-size: 1.2rem;
+}
+
+/* 5. Coluna da Esquerda (Contato e Habilidades) */
+
+/* Lista de Contato */
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.contact-list li i {
+    color: var(--bs-primary);
+    margin-right: 12px;
+    font-size: 1.2rem;
+    width: 20px; /* Alinha o texto verticalmente */
+    text-align: center;
+}
+
+.contact-list li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.contact-list li a:hover {
+    color: var(--bs-primary);
+    text-decoration: underline;
+}
+
+/* Habilidades Interativas (Sua sugestão) */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaçamento entre as pílulas */
+}
+
+.skill-badge {
+    /* Cores do seu CSS original */
+    background-color: #e8eaf6; 
+    color: #3f51b5;
+    
+    padding: 8px 15px;
+    border-radius: 50px; /* Formato de pílula */
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: default; /* Mostra que não é clicável */
+
+    /* A mágica da transição */
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+/* O EFEITO DE "LEVANTAR" (LIFT) */
+.skill-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(var(--bs-primary-rgb), 0.2);
+}
+
+/* 6. Coluna da Direita (Experiência e Formação) */
+
+/* Linha do tempo visual */
+.timeline-item {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.timeline-item h5 {
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.timeline-item h6 {
+    margin-bottom: 5px;
+}
+
+.timeline-item ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* Linha vertical (Desktop) */
+@media (min-width: 992px) {
+    .border-start-lg {
+        /* Adiciona a linha divisória sutil entre as colunas */
+        border-left: 1px solid var(--bs-border-color) !important;
+    }
+}
